@@ -1,0 +1,19 @@
+current directory: /home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+/home/wcdejesus/.asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230728-9872-851t3d sitelibdir\=./.gem.20230728-9872-851t3d clean
+
+current directory: /home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230728-9872-851t3d sitelibdir\=./.gem.20230728-9872-851t3d
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230728-9872-851t3d sitelibdir\=./.gem.20230728-9872-851t3d install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230728-9872-851t3d/debug
+
+current directory: /home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230728-9872-851t3d sitelibdir\=./.gem.20230728-9872-851t3d clean
