@@ -77,3 +77,5 @@ group :development do
 end
 
 gem 'spina', '~> 2.2'
+
+gem "tailwindcss-rails", "~> 2.0"

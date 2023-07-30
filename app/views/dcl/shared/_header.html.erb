@@ -1,0 +1,26 @@
+<!-- Header Start -->
+<section class="absolute top-0 left-0 z-50 w-full h-[100px] flex flex-row justify-between items-center py-5 px-5 md:px-14" data-controller="navbar">
+    <!-- Hidden Menu-->
+    <nav class="navigation flex flex-row flex-wrap justify-between items-start py-52 px-5 md:px-14 z-[-1]" data-navbar-target="hiddenMenu">
+        <%= render "dcl/shared/navigation" %>
+    </nav>
+    <!-- Visible Icons -->
+    <%= link_to "/home" do %>
+        <%= image_tag asset_path("logo_red"), class: "w-[56px] hover:cursor-pointer" %>
+    <% end %>
+
+
+    <span class="flex flex-row items-center">
+        <a href="https://discord.gg/dauntlesscreativelabs" target="_blank" class="join-discord invisible md:visible group">
+            JOIN OUR DISCORD SERVER
+        </a>
+        <button data-action="navbar#toggle" class="flex flex-col" data-navbar-target="menuIcon">
+            <span class="w-[40px] h-[4px] bg-[#bd0000] my-1 line1"></span>
+            <span class="w-[40px] h-[4px] bg-[#bd0000] my-1 line2"></span>
+            <span class="w-[40px] h-[4px] bg-[#bd0000] my-1 line3"></span>
+        </button>
+    </span>
+
+</section>
+<!-- Header End -->
+<%#= render 'dcl/shared/navigation' %>

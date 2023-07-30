@@ -1,0 +1,100 @@
+/* Menu Icon */
+.line1 {
+  transform: translateX(0) rotate(0) translateY(0);
+  transition: transform 0.2s ease, background-color 0.1s ease;
+  background-color: #bd0000;
+}
+
+.line2 {
+  transform: translateX(0) rotate(0) translateY(0);
+  opacity: 1;
+  transition: transform 0.2s ease, background-color 0.1s ease;
+  background-color: #bd0000;
+}
+
+.line3 {
+  transform: translateX(0) rotate(0) translateY(0);
+  transition: transform 0.2s ease, background-color 0.1s ease;
+  background-color: #bd0000;
+}
+
+.open .line1 {
+  transform: translateX(-10px) rotate(-45deg) translateY(16px);
+  transition: transform 0.2s ease, background-color 0.1s ease;
+  background-color: white;
+}
+
+.open .line2 {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.open .line3 {
+  transform: translateX(-10px) rotate(45deg) translateY(-16px);
+  transition: transform 0.2s ease, background-color 0.1s ease;
+  background-color: white;
+}
+
+/* Join Discord */
+.join-discord {
+  margin-right: 2.5rem;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #bd0000;
+  background: linear-gradient(to left, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  margin-left:10px;
+  transition: all 0.4s ease;
+  font-size: 14px;
+}
+
+.join-discord:hover {
+  background-position:left bottom;
+  color: black;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0vw;
+  height: 100vh;
+  background-color: rgb(20,20,20);
+  opacity: 0;
+  transition: width 0.5s ease-in, opacity 0.2s ease-in;
+}
+
+.navigation.open {
+  width: 100vw;
+  opacity: 1;
+  transition: width 0.2s ease-in, opacity 0.5s ease-in;
+}
+
+.nav-item {
+  opacity: 0;
+}
+
+@keyframes bounceInRightToLeft {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.open .nav-item {
+  animation: bounceInRightToLeft 0.5s ease-in var(--delay) forwards;
+}
