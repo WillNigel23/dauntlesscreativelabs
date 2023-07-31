@@ -53,6 +53,26 @@
   </div>
 </section>
 
+<!-- We Transform Companies -->
+<section class="flex flex-col md:flex-row w-full border-b border-black bg-[#e8e8e8]">
+  <div class="flex flex-col w-full justify-center items-center sm:items-start p-10 sm:p-16 md:w-[50%] border-r-0 md:border-r border-black">
+    <h2 class="font-black font-roboto text-4xl md:text-5xl lg:text-6xl mb-5 tracking-wide"> WE <i>TRANSFORM</i> COMPANIES </h2>
+
+    <p class="font-roboto text-base tracking-wide mb-5">
+      A dauntless team of visionaries, data-driven problem solvers, 
+      and curious experts with roots from various industries who 
+      believe that creativity, empathy and strategy are the key to 
+      impactful digital transformation and redefining perfection.
+    </p>
+
+    <%= link_to "WHY DAUNTLESS?", find_nav_by_name("About").materialized_path, class: "button-wipe whitespace-nowrap inline-block w-min px-[3.5rem] py-[1.5rem] text-white text-center text-sm transition-all duration-300 hover:text-black", style: "--gradient-left: black; --gradient-right: white;" %>
+  </div>
+  <div class="flex w-full  md:w-[50%] border-r-0 md:border-r border-black">
+    <%= image_tag asset_path("iphone_mockup"), class: "max-w-[75%] m-auto p-10 sm:p-16", style: "object-fit: cover;" %>
+  </div>
+</section>
+
+
 
 
 
