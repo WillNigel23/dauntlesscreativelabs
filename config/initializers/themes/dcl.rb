@@ -3,7 +3,15 @@ Spina::Theme.register do |theme|
   theme.title = 'DCL'
 
   theme.parts = [
-    {name: 'body', title: "body", part_type: "Spina::Parts::Text"}
+    {name: 'body', title: "body", part_type: "Spina::Parts::Text"},
+    {name: 'heading', title: "Heading", part_type: "Spina::Parts::Line"},
+    {
+      name: 'tag',
+      title: "Tag",
+      hint: "Subsets of a specific service",
+      parts: %w(heading),
+      part_type: "Spina::Parts::Repeater"
+    }
   ]
 
   theme.view_templates = [
@@ -11,7 +19,7 @@ Spina::Theme.register do |theme|
     {name: 'works', title: 'Works', parts: %w(body)},
     {name: 'work', title: 'Work', parts: %w(body)},
     {name: 'services', title: 'Services', parts: %w(body)},
-    {name: 'service', title: 'Service', parts: %w(body)},
+    {name: 'service', title: 'Service', parts: %w(body tag)},
     {name: 'about', title: 'About', parts: %w(body)},
     {name: 'privacy', title: 'Privacy Policy', parts: %w(body)},
     {name: 'terms', title: 'Terms of Use', parts: %w(body)}

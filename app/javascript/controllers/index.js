@@ -4,8 +4,14 @@
 
 import { application } from "./application"
 
+import AccordionController from "./accordion_controller"
+application.register("accordion", AccordionController)
+
 import HeroController from "./hero_controller"
 application.register("hero", HeroController)
+
+import ImageSpinnerController from "./image_spinner_controller"
+application.register("image-spinner", ImageSpinnerController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)

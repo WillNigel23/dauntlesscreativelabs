@@ -35,26 +35,6 @@
   background-color: white;
 }
 
-/* Join Discord */
-.join-discord {
-  margin-right: 2.5rem;
-  padding: 1rem;
-  color: white;
-  text-decoration: none;
-  border: 1px solid #bd0000;
-  background: linear-gradient(to left, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position:right bottom;
-  margin-left:10px;
-  transition: all 0.4s ease;
-  font-size: 14px;
-}
-
-.join-discord:hover {
-  background-position:left bottom;
-  color: black;
-}
-
 .navigation {
   position: fixed;
   top: 0;

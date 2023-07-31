@@ -1,0 +1,12 @@
+/* Button Wipe */
+.button-wipe {
+  --gradient-left: black;
+  --gradient-right: white;
+  background: linear-gradient(to left, var(--gradient-left) 50%, var(--gradient-right) 50%);
+  background-size: 200% 100%;
+  background-position:right;
+}
+
+.button-wipe:hover {
+  background-position:left;
+}
