@@ -17,3 +17,13 @@
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
+
+.text-stroke {
+  text-shadow: 
+    var(--stroke-size, 1px) 0 var(--stroke-color, black),
+    0 var(--stroke-size, 1px) var(--stroke-color, black),
+    -1px -1px 0 var(--stroke-color, black),
+    1px -1px 0 var(--stroke-color, black),
+    -1px 1px 0 var(--stroke-color, black),
+    1px 1px 0 var(--stroke-color, black);
+}

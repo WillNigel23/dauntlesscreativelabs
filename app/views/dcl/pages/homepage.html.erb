@@ -1,3 +1,34 @@
+<!-- Home Starts Here-->
+
+
+<!-- Hero Section -->
+<section class="flex flex-col w-full">
+  <div class="relative w-full" data-controller="hero">
+    <video autoplay muted loop class="w-full" data-hero-target="video">
+      <source src="<%= asset_path('hero.webm') %>" type="video/webm">
+    </video> 
+    <button data-hero-target="audio" data-action="click->hero#toggle" class="absolute bottom-10 right-10 xl:bottom-36 xl:right-36 2xl:bottom-48 2xl:right-48 p-[0.5rem] text-xs sm:text-sm md:text-base md:p-[1rem] z-[10] bg-black bg-opacity-30 text-white underline border border-white"> AUDIO: OFF </button>
+  </div>
+</section>
+
+
+<!-- Text Banner -->
+<section class="max-w-[100%] overflow-hidden py-5">
+  <div class="marquee">
+    <p class="text-white font-bold text-6xl md:text-9xl text-stroke mx-5" style="--stroke-size: 1px; --stroke-color: black;">CAPABILITIES</p>
+    <p class="text-black font-bold text-6xl md:text-9xl text-stroke mx-5" style="--stroke-size: 1px; --stroke-color: black;">CAPABILITIES</p>
+    <p class="text-white font-bold text-6xl md:text-9xl text-stroke mx-5" style="--stroke-size: 1px; --stroke-color: black;">CAPABILITIES</p>
+    <p class="text-black font-bold text-6xl md:text-9xl text-stroke mx-5" style="--stroke-size: 1px; --stroke-color: black;">CAPABILITIES</p>
+  </div>
+</section>
+
+
+
+
+
+<!-- Home Ends Here -->
+
+
 <div class="prose md:prose-lg">
   <%= content.html :body %>
 </div>

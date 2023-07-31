@@ -7,7 +7,7 @@ Spina::Theme.register do |theme|
   ]
 
   theme.view_templates = [
-    {name: 'homepage', title: 'Homepage', parts: %w(body)},
+    {name: 'homepage', title: 'Home', parts: %w(body)},
     {name: 'works', title: 'Works', parts: %w(body)},
     {name: 'work', title: 'Work', parts: %w(body)},
     {name: 'services', title: 'Services', parts: %w(body)},

@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import HeroController from "./hero_controller"
+application.register("hero", HeroController)
+
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
