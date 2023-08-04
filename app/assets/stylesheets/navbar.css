@@ -37,21 +37,21 @@
 
 .navigation {
   position: fixed;
-  display: none;
+  visibility: hidden;
   top: 0;
   left: 0;
   width: 0vw;
   height: 100vh;
   background-color: rgb(20,20,20);
   opacity: 0;
-  transition: width 0.5s ease-in, opacity 0.2s ease-in;
+  transition: width 0.5s ease-in, opacity 0.2s ease-in, visibility 0.2s ease-in;
 }
 
 .navigation.open {
-  display: flex;
+  visibility: visible;
   width: 100vw;
   opacity: 1;
-  transition: width 0.2s ease-in, opacity 0.5s ease-in;
+  transition: width 0.5s ease-in, opacity 0.2s ease-in, visibility 0.2s ease-in;
 }
 
 .nav-item {

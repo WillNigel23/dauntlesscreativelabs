@@ -1,0 +1,87 @@
+<nav class="flex flex-col w-full items-center justify-center bg-[#e0e0e0]" data-controller="grain" id="noise-bg">
+    <span class="flex flex-col sm:flex-row w-full px-5 justify-between p-5 z-[1]">
+        <div class="flex flex-1 flex-col mb-2">
+            <p class="text-base text-[#545454] tracking-tighter mb-2"> EXPLORE </p>
+            <ul class="w-full">
+                <% main_nav_items.each do |nav_item| %>
+                <li>
+                    <%= link_to nav_item.menu_title, nav_item.materialized_path, class: "text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]" %>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="flex flex-1 flex-col mb-2">
+            <p class="text-base text-[#545454] tracking-tighter mb-2"> MORE SERVICES </p>
+            <ul class="w-full">
+                <% services.each do |nav_item| %>
+                <li>
+                    <%= link_to nav_item.menu_title, nav_item.materialized_path, class: "text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]" %>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="flex flex-1 flex-col mb-2">
+            <p class="text-base text-[#545454] tracking-tighter mb-2"> CONNECT </p>
+            <ul class="w-full">
+                <li>
+                    <a href="https://be.net/bedauntless" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        Behance
+                    </a>
+                </li>
+                <li>
+                    <a href="https://dribbble.com/DauntlessCreativeLabs" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        Dribble 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com/dauntlesscreativelabs" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        Facebook 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/dauntless-creative-labs-llc" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        LinkedIn 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/dauntlesscreativelabs" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@dauntlesscreativelabs" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        TikTok 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/dauntless_cl" target="_blank" class="text-xs font-sans font-bold text-[#666] transition-all duration-300 hover:text-[#bd0000]"> 
+                        Twitter 
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-1 flex-col mb-2">
+            <p class="text-base text-[#545454] tracking-tighter mb-2"> CONTACT US </p>
+            <a href="mailto:info@dauntlesscreativelabs.com" class="text-xs font-sans font-bold text-[#666] border-b border-[#bd0000] transition-all duration-300 hover:text-[#bd0000] mb-2 w-min"> info@dauntlesscreativelabs.com </a>
+            <p class="text-xs font-sans font-bold text-[#666] mb-5"> Surprise, AZ 85379 </p>
+
+            <a href="https://discord.gg/dauntlesscreativelabs" 
+                target="_blank" 
+                class="button-wipe p-[1rem] text-white text-xs transition-all duration-300 hover:text-black w-min min-w-[225px]"
+                style="--gradient-left: black; --gradient-right: white;"
+                >
+                JOIN OUR DISCORD SERVER
+            </a>
+        </div>
+    </span>
+    <span class="flex flex-col py-10 px-10 my-5 w-full items-center justify-center border-t border-black z-[1]">
+        <p class="font-bold text-[10px] text-center text-[#666]">© MMXXII DAUNTLESS CREATIVE LABS, ALL RIGHTS RESERVED.</p>
+        <ul class="flex flex-row">
+            <% sub_nav_items.each do |nav_item| %>
+                <li class="mx-2">
+                    <%= link_to nav_item.menu_title.upcase, nav_item.materialized_path, class: "font-bold text-[10px] text-[#666] transition-all duration-300 hover:text-[#bd0000]" %>
+                </li>
+            <% end %>
+        </ul>
+    </span>
+</nav>

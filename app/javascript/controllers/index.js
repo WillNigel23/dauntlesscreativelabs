@@ -7,6 +7,9 @@ import { application } from "./application"
 import AccordionController from "./accordion_controller"
 application.register("accordion", AccordionController)
 
+import GrainController from "./grain_controller"
+application.register("grain", GrainController)
+
 import HeroController from "./hero_controller"
 application.register("hero", HeroController)
 
