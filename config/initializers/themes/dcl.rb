@@ -3,7 +3,6 @@ Spina::Theme.register do |theme|
   theme.title = 'DCL'
 
   theme.parts = [
-    {name: 'body', title: "body", part_type: "Spina::Parts::Text"},
     {name: 'heading', title: "Heading", part_type: "Spina::Parts::Line"},
     {
       name: 'tag',
@@ -11,13 +10,37 @@ Spina::Theme.register do |theme|
       hint: "Subsets of a specific service",
       parts: %w(heading),
       part_type: "Spina::Parts::Repeater"
-    }
+    },
+    # GENERAL PARTS
+    {name: 'body', title: "Body", part_type: "Spina::Parts::Text"},
+    {name: 'banner', title: "Banner Image", part_type: "Spina::Parts::Image"},
+    {name: 'image', title: "Content Image", part_type: "Spina::Parts::Image"},
+    {name: 'video', title: "Video File", part_type: "Spina:Parts::Attachment"},
+
+    # CONTENT PARTS
+    {name: 'category', title: "Category", hint: "Category for content", options: ["creatives", "production", "web_dev", "esports", "nft"], part_type: "Spina::Parts::Option"},
+    {name: 'color', title: "Color", hint: "Format: `bg-[#fffff] text-[#000000]`", part_type: "Spina::Parts::Line"},
+    {name: 'direction', title: "Direction", hint: "Default column", options: ["row", "column"], part_type: "Spina::Parts::Option"},
+    {
+      name: 'section', 
+      title: "Section", 
+      hint: "Contains blocks of content",
+      parts: %w(heading color block),
+      part_type: "Spina::Parts::Repeater"
+    },
+    {
+      name: 'block',
+      title: "Block",
+      hint: "Block of content",
+      parts: %w(direction body),
+      part_type: "Spina::Parts::Repeater"
+    },
   ]
 
   theme.view_templates = [
     {name: 'homepage', title: 'Home', parts: %w(body)},
     {name: 'works', title: 'Works', parts: %w(body)},
-    {name: 'work', title: 'Work', parts: %w(body)},
+    {name: 'work', title: 'Work', parts: %w(banner category section)},
     {name: 'services', title: 'Services', parts: %w(body)},
     {name: 'service', title: 'Service', parts: %w(body tag)},
     {name: 'about', title: 'About', parts: %w(body)},

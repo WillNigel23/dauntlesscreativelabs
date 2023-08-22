@@ -1,0 +1,21 @@
+<!-- Banner -->
+<section class="flex items-start justify-center w-full h-[540px] overflow-hidden bg-gradient-to-t from-black to-[#303030] p-0 m-0">
+    <%= content.image_tag(:banner, {resize_to_fill: [1920, 1080]}, {class: 'w-full min-w-[1920px] object-cover opacity-75'}) %>
+</section>
+
+<!-- Sections -->
+<% repeater(:section) do |s| %>
+    <section class="markdown" style="background-color: <%= s.content(:color).match(/bg-\[(#[A-Fa-f0-9]+)\]/)[1] %>; color: <%= s.content(:color).match(/text-\[(#[A-Fa-f0-9]+)\]/)[1] %>;"> 
+
+        <% if s.content(:heading) != "" %>
+            <span class="w-full justify-center items-center px-5 sm:mx-10">
+                <h2 style="max-width: 1030px; margin-bottom: 1.25rem;"> <%= s.content(:heading) %> </h2>
+            </span>
+        <% end %>
+        <% repeater(s.content(:block)) do |r| %>
+            <div class="block-<%= r.content(:direction).present? ? r.content(:direction) : 'column' %>">
+                <%= r.content.html(:body) %>
+            </div>
+        <% end %>
+    </section>
+<% end %>
