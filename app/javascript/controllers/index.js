@@ -16,5 +16,8 @@ application.register("hero", HeroController)
 import ImageSpinnerController from "./image_spinner_controller"
 application.register("image-spinner", ImageSpinnerController)
 
+import MarkdownController from "./markdown_controller"
+application.register("markdown", MarkdownController)
+
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)

@@ -1,21 +1,27 @@
 <!-- Banner -->
 <section class="flex items-start justify-center w-full h-[540px] overflow-hidden bg-gradient-to-t from-black to-[#303030] p-0 m-0">
-    <%= content.image_tag(:banner, {resize_to_fill: [1920, 1080]}, {class: 'w-full min-w-[1920px] object-cover opacity-75'}) %>
+    <%= content.image_tag(:banner, {resize_to_fill: [1920, 1080] }, {class: 'w-full min-w-[1920px] object-cover opacity-75'}) %>
 </section>
 
 <!-- Sections -->
 <% repeater(:section) do |s| %>
-    <section class="markdown" style="background-color: <%= s.content(:color).match(/bg-\[(#[A-Fa-f0-9]+)\]/)[1] %>; color: <%= s.content(:color).match(/text-\[(#[A-Fa-f0-9]+)\]/)[1] %>;"> 
-
+    <section class="markdown flex flex-col items-center justify-center px-5 sm:px-10 md:px-20 lg:px-36 py-10 sm:py-20" data-bg-color="<%= s.content(:color)&.match(/bg-\[(#[A-Fa-f0-9]+)\]/)[1] %>" data-text-color="<%= s.content(:color)&.match(/text-\[(#[A-Fa-f0-9]+)\]/)[1] %>" data-controller="markdown"> 
         <% if s.content(:heading) != "" %>
-            <span class="w-full justify-center items-center px-5 sm:mx-10">
-                <h2 style="max-width: 1030px; margin-bottom: 1.25rem;"> <%= s.content(:heading) %> </h2>
-            </span>
+        <section class="w-full max-w-[1200px] flex flex-row flex-wrap justify-around mb-5">
+            <h1><%= s.content(:heading) %></h1>
+        </section>
         <% end %>
-        <% repeater(s.content(:block)) do |r| %>
-            <div class="block-<%= r.content(:direction).present? ? r.content(:direction) : 'column' %>">
-                <%= r.content.html(:body) %>
-            </div>
+        <section class="w-full max-w-[1200px] flex flex-row flex-wrap lg:flex-nowrap justify-center sm:justify-between">
+            <% repeater(s.content(:block)) do |r| %>
+                <section class="block flex-grow sm:flex-grow-0 mx-0 sm:mx-5 my-2 justify-center items-center">
+                    <%= r.content.html(:body) %>
+                </section>
+            <% end %>
+        </section>
+        <% if s.content.attachment_url(:video) != nil %>
+        <section class="w-full max-w-[1200px] flex flex-row flex-wrap justify-around my-5">
+            <video class="w-full" src="<%= s.content.attachment_url(:video) %>" muted autoplay loop></video>
+        </section>
         <% end %>
     </section>
 <% end %>

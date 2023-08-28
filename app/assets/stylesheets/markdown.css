@@ -1,135 +1,80 @@
 .markdown {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 54px;
-    padding-bottom: 54px;
-    color: inherit;
-}
-@media (min-width: 1024px) {
-    .markdown {
-        flex-wrap: wrap; /* Disable flex wrap at the lg breakpoint */
-        align-items: start;
-        padding-left: 7rem;
-        padding-right: 7rem;
-    }
-    .markdown .block-column {
-        width: auto;
-    }
-    .markdown div {
-        width: auto;
-    }
-}
-@media (min-width: 640px) {
-    .markdown {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    .markdown .block-column {
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
-    }
+
 }
 
-.markdown .block-column {
+.markdown img {
+    max-width: 500px;
+    height: 320px;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: top;
+    margin-bottom: 10px;
+    transition: transform 300ms ease-in-out;
+}
+
+.markdown img:hover {
+    transform: scale(1.03);
+    transition: transform 300ms ease-in-out;
+}
+
+.markdown div {
+    max-width: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8rem;
+
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    flex-grow: 1;
-    min-width: 185px;
-    max-width: 1030px;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-}
-
-.markdown .block-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: start;
-    max-width: 1030px;
-}
+    align-items: center;
 
-@media (min-width: 640px) {
-    .markdown .block-row {
-      margin-left: 2.5rem; 
-      margin-right: 2.5rem; 
-    }
-}
-
-.markdown  img {
-    object-fit: contain;
-}
-
-.markdown  p {
-    width: 100%;
-    white-space: normal;
-}
-
-.markdown c {
-    max-width: 312px;
-    width: 100%;
-    white-space: normal;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2.5rem;
-}
-
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown div {
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-}
-
-.markdown div {
-    line-height: 1.8rem;
-    white-space: normal 
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .markdown h1 {
-    font-size: 40px; /* Adjust the size as needed */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 2.8rem;
-    margin: 1rem 0; /* Adjust margin spacing as needed */
-    padding: 0; /* Reset padding */
-}
-
-.markdown h2 {
-    font-size: 30px; /* Adjust the size as needed */
-    font-weight: bold;
-    margin: 1rem 0; /* Adjust margin spacing as needed */
-    padding: 0; /* Reset padding */
+    line-height: 2rem;
+    color: inherit;
+    margin: 0px;
+    padding-bottom: 1rem;
 }
 
 .markdown h3 {
-    font-size: 1.25rem; /* Adjust the size as needed */
-    font-weight: bold;
-    margin: 1rem 0; /* Adjust margin spacing as needed */
-    padding: 0; /* Reset padding */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: inherit;
+    padding-bottom: 1rem;
 }
 
 .markdown h4 {
-    font-size: 1rem; /* Adjust the size as needed */
-    font-weight: bold;
-    margin: 1rem 0; /* Adjust margin spacing as needed */
-    padding: 0; /* Reset padding */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 320px;
+    line-height: 1.8rem;
+    color: inherit;
+    padding-bottom: 1rem;
+    padding-right: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-.markdown  img {
-    width: 100%;
-    max-width: 312px; 
+.markdown li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-.markdown span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.markdown blockquote {
+    padding: 2rem;
 }

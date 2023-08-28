@@ -15,24 +15,23 @@ Spina::Theme.register do |theme|
     {name: 'body', title: "Body", part_type: "Spina::Parts::Text"},
     {name: 'banner', title: "Banner Image", part_type: "Spina::Parts::Image"},
     {name: 'image', title: "Content Image", part_type: "Spina::Parts::Image"},
-    {name: 'video', title: "Video File", part_type: "Spina:Parts::Attachment"},
+    {name: "video", title: "Video File", hint: "Optional", part_type: "Spina::Parts::Attachment"},
 
     # CONTENT PARTS
     {name: 'category', title: "Category", hint: "Category for content", options: ["creatives", "production", "web_dev", "esports", "nft"], part_type: "Spina::Parts::Option"},
     {name: 'color', title: "Color", hint: "Format: `bg-[#fffff] text-[#000000]`", part_type: "Spina::Parts::Line"},
-    {name: 'direction', title: "Direction", hint: "Default column", options: ["row", "column"], part_type: "Spina::Parts::Option"},
     {
       name: 'section', 
       title: "Section", 
       hint: "Contains blocks of content",
-      parts: %w(heading color block),
+      parts: %w(heading color video block),
       part_type: "Spina::Parts::Repeater"
     },
     {
       name: 'block',
       title: "Block",
       hint: "Block of content",
-      parts: %w(direction body),
+      parts: %w(body),
       part_type: "Spina::Parts::Repeater"
     },
   ]
