@@ -13,6 +13,9 @@ application.register("grain", GrainController)
 import HeroController from "./hero_controller"
 application.register("hero", HeroController)
 
+import HoverViewController from "./hover_view_controller"
+application.register("hover-view", HoverViewController)
+
 import ImageSpinnerController from "./image_spinner_controller"
 application.register("image-spinner", ImageSpinnerController)
 

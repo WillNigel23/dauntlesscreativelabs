@@ -14,6 +14,7 @@ Spina::Theme.register do |theme|
     # GENERAL PARTS
     {name: 'body', title: "Body", part_type: "Spina::Parts::Text"},
     {name: 'banner', title: "Banner Image", part_type: "Spina::Parts::Image"},
+    {name: 'preview', title: "Preview Image", part_type: "Spina::Parts::Image"},
     {name: 'image', title: "Content Image", part_type: "Spina::Parts::Image"},
     {name: "video", title: "Video File", hint: "Optional", part_type: "Spina::Parts::Attachment"},
 
@@ -39,7 +40,7 @@ Spina::Theme.register do |theme|
   theme.view_templates = [
     {name: 'homepage', title: 'Home', parts: %w(body)},
     {name: 'works', title: 'Works', parts: %w(body)},
-    {name: 'work', title: 'Work', parts: %w(banner category section)},
+    {name: 'work', title: 'Work', parts: %w(banner preview category section)},
     {name: 'services', title: 'Services', parts: %w(body)},
     {name: 'service', title: 'Service', parts: %w(body tag)},
     {name: 'about', title: 'About', parts: %w(body)},

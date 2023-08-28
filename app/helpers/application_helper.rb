@@ -16,6 +16,6 @@ module ApplicationHelper
   end
 
   def find_nav_by_name(name)
-    @nav_item ||= Spina::NavigationItem.roots.sorted.find { |nav_item| nav_item.menu_title == name }
+    Spina::NavigationItem.roots.sorted.find { |nav_item| nav_item.menu_title == name }
   end
 end
