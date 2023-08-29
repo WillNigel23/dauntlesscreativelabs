@@ -3,13 +3,24 @@
 }
 
 .markdown img {
-    max-width: 500px;
     height: 320px;
     width: 100%;
     object-fit: scale-down;
     object-position: top;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     transition: transform 300ms ease-in-out;
+}
+
+@media (max-width: 639px) {
+    .markdown img {
+        height: auto;
+    }
+}
+
+@media (min-width: 640px) {
+    .markdown img {
+        height: 320px;
+    }
 }
 
 .markdown img:hover {

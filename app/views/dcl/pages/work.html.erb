@@ -13,7 +13,7 @@
         <% end %>
         <section class="w-full max-w-[1200px] flex flex-row flex-wrap lg:flex-nowrap justify-center sm:justify-between">
             <% repeater(s.content(:block)) do |r| %>
-                <section class="block flex-grow sm:flex-grow-0 mx-0 sm:mx-5 my-2 justify-center items-center">
+                <section class="block flex-grow mx-0 sm:mx-5 my-2 justify-center items-center">
                     <%= r.content.html(:body) %>
                 </section>
             <% end %>
