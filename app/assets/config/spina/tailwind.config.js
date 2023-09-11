@@ -1,10 +1,10 @@
 module.exports = {
   content: [
-    '/home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/spina-2.15.1/app/views/**/*.*',
-'/home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/spina-2.15.1/app/components/**/*.*',
-'/home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/spina-2.15.1/app/helpers/**/*.*',
-'/home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/spina-2.15.1/app/assets/javascripts/**/*.js',
-'/home/wcdejesus/dcl/dauntlesscreativelabs/vendor/bundle/ruby/3.2.0/gems/spina-2.15.1/app/**/application.tailwind.css'
+    '/home/wcdejesus/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/spina-2.15.1/app/views/**/*.*',
+'/home/wcdejesus/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/spina-2.15.1/app/components/**/*.*',
+'/home/wcdejesus/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/spina-2.15.1/app/helpers/**/*.*',
+'/home/wcdejesus/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/spina-2.15.1/app/assets/javascripts/**/*.js',
+'/home/wcdejesus/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/spina-2.15.1/app/**/application.tailwind.css'
   ],
   theme: {
     fontFamily: {
