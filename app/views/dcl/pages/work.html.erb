@@ -7,11 +7,11 @@
 <% repeater(:section) do |s| %>
     <section class="markdown flex flex-col items-center justify-center px-5 sm:px-10 md:px-20 lg:px-36 py-10 sm:py-20" data-bg-color="<%= s.content(:color)&.match(/bg-\[(#[A-Fa-f0-9]+)\]/)[1] %>" data-text-color="<%= s.content(:color)&.match(/text-\[(#[A-Fa-f0-9]+)\]/)[1] %>" data-controller="markdown"> 
         <% if s.content(:heading) != "" %>
-        <section class="w-full max-w-[1200px] flex flex-row flex-wrap justify-around mb-5">
+        <section class="w-full max-w-[1450px] flex flex-row flex-wrap justify-around mb-5 px-5">
             <h1><%= s.content(:heading) %></h1>
         </section>
         <% end %>
-        <section class="w-full max-w-[1200px] flex flex-row flex-wrap lg:flex-nowrap justify-center sm:justify-between">
+        <section class="w-full max-w-[1450px] flex flex-row flex-wrap lg:flex-nowrap justify-center sm:justify-between">
             <% repeater(s.content(:block)) do |r| %>
                 <section class="block flex-grow mx-0 sm:mx-5 my-2 justify-center items-center">
                     <%= r.content.html(:body) %>
@@ -19,7 +19,7 @@
             <% end %>
         </section>
         <% if s.content.attachment_url(:video) != nil %>
-        <section class="w-full max-w-[1200px] flex flex-row flex-wrap justify-around my-5">
+        <section class="w-full max-w-[1450px] flex flex-row flex-wrap justify-around my-5 px-5">
             <video class="w-full" src="<%= s.content.attachment_url(:video) %>" muted autoplay loop></video>
         </section>
         <% end %>

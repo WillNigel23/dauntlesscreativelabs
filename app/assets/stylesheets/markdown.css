@@ -2,6 +2,11 @@
 
 }
 
+.markdown .block {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
 .markdown img {
     height: 320px;
     width: 100%;
@@ -15,11 +20,17 @@
     .markdown img {
         height: auto;
     }
+    .markdown h2 {
+        width: auto;
+    }
 }
 
 @media (min-width: 640px) {
     .markdown img {
         height: 320px;
+    }
+    .markdown h2 {
+        width: 200px;
     }
 }
 
@@ -30,7 +41,6 @@
 
 .markdown div {
     max-width: 1000px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.8rem;
@@ -45,17 +55,17 @@
 }
 
 .markdown h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+    font-size: 42px;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 2.5rem;
     color: inherit;
     margin: 0px;
     padding-bottom: 1rem;
 }
 
+
+
 .markdown h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 700;
     color: inherit;
@@ -63,9 +73,9 @@
 }
 
 .markdown h4 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    max-width: 320px;
     width: 100%;
     line-height: 1.8rem;
     color: inherit;
@@ -78,7 +88,6 @@
 }
 
 .markdown li {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
     padding-bottom: 1rem;
