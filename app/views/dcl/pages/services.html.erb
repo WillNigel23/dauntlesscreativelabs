@@ -1,0 +1,48 @@
+<section class="w-full p-5 sm:px-16 mt-[100px] mb-5">
+    <h2 class="font-roboto text-black text-7xl md:text-8xl lg:text-9xl tracking-wide mr-auto border-b border-[#333] pb-5"> SERVICES </h2>
+    <span class="w-full flex flex-row justify-between items-center text-[13px] font-normal py-5">
+        <p> CAPABILITIES </p>
+        <p> || </p>
+    </span>
+</section>
+<section class="services w-full flex flex-col md:flex-row justify-center sm:justify-between p-5 sm:px-16 mb-5">
+    <%= content.html(:body) %>
+
+    <span class="flex flex-col items-center mx-auto mt-5 md:mt-0">
+        <h1 class="font-medium text-black text-9xl pb-5"> 06 </h1>
+        <p class="text-[#666666]"> AREAS OF CAPABILITIES </p>
+    </span>
+</section>
+<section class="w-full flex flex-col justify-center sm:justify-between p-5 sm:px-16 mb-5 bg-[#F0F0F0]">
+    <% services.each_with_index do |service, index| %>
+        <span class="w-full flex flex-row justify-between items-center text-[13px] font-normal py-5 border-t border-black">
+            <p> <%= RomanNumerals.to_roman(index + 1) %> </p>
+            <p> /<%= RomanNumerals.to_roman(services.count) %> </p>
+        </span>
+        <div class="w-full grid gird-cols-1 md:grid-cols-3 gap-7 py-10 mb-5">
+            <span class="flex flex-col w-full justify-center border-r-none sm:border-r-2 border-black">
+                <h1 class="font-medium text-2xl md:text-4xl lg:text-5xl mb-5"> <%= service.title %> </h1>
+                <ul class="mb-5">
+                    <% service.content(:tag).each do |tag| %>
+                        <li class="font-medium text-[#6F6666]"><%= tag.content(:heading) %></li>
+                    <% end %>
+                </ul>
+                <%= link_to "LEARN MORE", service.materialized_path, class: "button-wipe whitespace-nowrap inline-block w-min px-[3.5rem] py-[1.5rem] border border-black text-black text-center text-sm transition-all duration-300 hover:text-white", style: "--gradient-left: #F0F0F0; --gradient-right: black;" %>
+            </span>
+
+            <% works.select { |work| work.content(:category) == service.content(:tagslug) }.take(2).each do |work| %>
+                <%= link_to work.materialized_path, class:"flex flex-col my-5" do %>
+                    <span class="inline-block aspect-video md:aspect-[9/16] overflow-hidden w-full h-full mb-3">
+                        <%= work.content.image_tag(:banner, {}, class: "object-cover w-full h-full hover:scale-110 transition-all duration-1000")%> 
+                    </span>
+                    <span class="w-full">
+                        <p class="w-full font-bold text-xl text-black tracking-wide hover:text-[#bd0000] transition-all duration-700"> <%= work.title %> </p>
+                        <!--
+                        <p class="w-full text-base text-black tracking-wide uppercase hover:text-[#bd0000] transition-all duration-700"> <%= work.content(:category) %> </p>
+                        -->
+                    </span>
+                <% end %>
+            <% end %>
+        </div>
+    <% end %>
+</section>
