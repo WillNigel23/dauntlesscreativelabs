@@ -35,6 +35,9 @@ Spina::Theme.register do |theme|
       parts: %w(body),
       part_type: "Spina::Parts::Repeater"
     },
+
+    # SERVICES PARTS
+    {name: 'tagslug', title: "Tag Slug", part_type: "Spina::Parts::Line"},
   ]
 
   theme.view_templates = [
@@ -42,7 +45,7 @@ Spina::Theme.register do |theme|
     {name: 'works', title: 'Works', parts: %w(body)},
     {name: 'work', title: 'Work', parts: %w(banner preview category section)},
     {name: 'services', title: 'Services', parts: %w(body)},
-    {name: 'service', title: 'Service', parts: %w(body tag)},
+    {name: 'service', title: 'Service', parts: %w(tagslug body tag)},
     {name: 'about', title: 'About', parts: %w(body)},
     {name: 'privacy', title: 'Privacy Policy', parts: %w(body)},
     {name: 'terms', title: 'Terms of Use', parts: %w(body)}
