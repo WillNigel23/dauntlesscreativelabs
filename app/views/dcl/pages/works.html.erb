@@ -1,7 +1,44 @@
-<section class="w-full p-5 sm:px-16 mt-[100px] mb-5">
+<section class="w-full p-5 sm:px-16 mt-[100px] mb-5" data-controller="workfilter">
     <h2 class="font-roboto text-black text-7xl md:text-8xl lg:text-9xl tracking-wide mr-auto border-b border-[#333] pb-5"> WORK </h2>
     <span class="w-full flex flex-row justify-between items-center text-[13px] font-normal py-5">
         <p> CASE STUDIES </p>
         <p> || </p>
     </span>
+
+    <nav class="w-full overflow-x-auto pb-5 my-7">
+        <ul class="w-full flex flex-nowrap" data-workfilter-target="nav">
+            <li class="cursor-pointer whitespace-nowrap underline pr-7" data-slug="" data-action="click->workfilter#toggle">
+                All Work
+            </li>
+            <li class="cursor-pointer whitespace-nowrap pr-7" data-slug="creatives" data-action="click->workfilter#toggle">
+                Creatives 
+            </li>
+            <li class="cursor-pointer whitespace-nowrap pr-7" data-slug="production" data-action="click->workfilter#toggle">
+                Production 
+            </li>
+            <li class="cursor-pointer whitespace-nowrap pr-7" data-slug="web_dev" data-action="click->workfilter#toggle">
+                Web Dev & Design 
+            </li>
+            <li class="cursor-pointer whitespace-nowrap pr-7" data-slug="esports" data-action="click->workfilter#toggle">
+                Esports Design 
+            </li>
+            <li class="cursor-pointer whitespace-nowrap pr-7" data-slug="nft" data-action="click->workfilter#toggle">
+                NFT 
+            </li>
+        </ul>
+    </nav>
+
+    <div class="w-full min-h-[65vh] grid grid-cols-1 sm:grid-cols-2 gap-5 transition-opacity duration-500" data-workfilter-target="items">
+        <% works.each do |work| %>
+            <%= link_to work.materialized_path, class: "flex flex-col", data: { slug: work.content(:category) } do %>
+                <span class="inline-block aspect-video overflow-hidden w-full h-full mb-3">
+                    <%= work.content.image_tag(:banner, {}, class: "object-cover w-full h-full hover:scale-110 transition-all duration-1000")%> 
+                </span>
+                <span class="w-full">
+                    <p class="w-full font-bold text-2xl text-black tracking-wide hover:text-[#bd0000] transition-all duration-700"> <%= work.title %> </p>
+                    <p class="w-full text-base text-black tracking-wide uppercase hover:text-[#bd0000] transition-all duration-700"> <%= work.content(:category) %> </p>
+                </span>
+            <% end %>
+        <% end %>
+    </div>
 </section>
