@@ -24,3 +24,6 @@ application.register("markdown", MarkdownController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import WorkfilterController from "./workfilter_controller"
+application.register("workfilter", WorkfilterController)
