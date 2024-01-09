@@ -1,3 +1,7 @@
 # Dauntless Creative Labs CMS
 
-## Backend SpinaCMS
+- Ruby on Rails
+- SpinaCMS
+- Postgresql
+- Tailwind CSS
+- Stimulus JS
